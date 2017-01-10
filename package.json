@@ -1,0 +1,23 @@
+{
+  "name": "auto-screenshot-comparison",
+  "version": "1.0.0",
+  "description": "Automatically screenshot all URLs in an array, compare them to previous screenshots and ask for confirmation if any of them have changed",
+  "main": "screenshot-taker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haziba/auto-screenshot-comparison.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haziba/auto-screenshot-comparison/issues"
+  },
+  "homepage": "https://github.com/Haziba/auto-screenshot-comparison#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "promise-polyfill": "^6.0.2"
+  }
+}

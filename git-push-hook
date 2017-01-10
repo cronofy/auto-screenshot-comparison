@@ -1,0 +1,24 @@
+#! /bin/bash
+exec < /dev/tty
+
+eval phantomjs ./screenshot-taker.js
+
+if [ $? -ne 0 ]
+then
+  terminal-notifier -title screenshot-taker -message "Image mismatch"
+  echo "Image mismatch."
+  read -n1 -r -p "Press any key to open images folder..." key
+  open ./screengrabs/check
+
+  echo ""
+
+  read -n1 -r -p "Are these files correct? (y/n)" correct
+
+  if [ "$correct" = "y" ];
+  then
+    mkdir -p ./screengrabs/base
+    mv ./screengrabs/check/* ./screengrabs/base
+  else
+    exit 1
+  fi
+fi
